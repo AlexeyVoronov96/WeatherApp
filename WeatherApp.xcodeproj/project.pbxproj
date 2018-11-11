@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB45EED82198CB2D00BC0D59 /* WeatherScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = AB45EED62198CB2D00BC0D59 /* WeatherScreen.png */; };
+		AB45EED92198CB2D00BC0D59 /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = AB45EED72198CB2D00BC0D59 /* LaunchScreen.png */; };
 		AB8ADE1F21986896007EE65B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8ADE1E21986896007EE65B /* AppDelegate.swift */; };
 		AB8ADE2121986896007EE65B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8ADE2021986896007EE65B /* ViewController.swift */; };
 		AB8ADE2421986896007EE65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8ADE2221986896007EE65B /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB45EED62198CB2D00BC0D59 /* WeatherScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeatherScreen.png; sourceTree = "<group>"; };
+		AB45EED72198CB2D00BC0D59 /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		AB8ADE1B21986896007EE65B /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8ADE1E21986896007EE65B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8ADE2021986896007EE65B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,11 +49,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB45EED52198CB0600BC0D59 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				AB45EED72198CB2D00BC0D59 /* LaunchScreen.png */,
+				AB45EED62198CB2D00BC0D59 /* WeatherScreen.png */,
+			);
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
 		AB8ADE1221986896007EE65B = {
 			isa = PBXGroup;
 			children = (
 				AB8ADE1D21986896007EE65B /* WeatherApp */,
 				AB8ADE1C21986896007EE65B /* Products */,
+				AB45EED52198CB0600BC0D59 /* ScreenShots */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,9 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB45EED82198CB2D00BC0D59 /* WeatherScreen.png in Resources */,
 				AB8ADE292198689A007EE65B /* LaunchScreen.storyboard in Resources */,
 				AB8ADE262198689A007EE65B /* Assets.xcassets in Resources */,
 				AB8ADE2421986896007EE65B /* Main.storyboard in Resources */,
+				AB45EED92198CB2D00BC0D59 /* LaunchScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
