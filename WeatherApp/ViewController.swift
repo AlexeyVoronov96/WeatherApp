@@ -11,6 +11,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    //MARK: - Properies
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var pressureLabel: UILabel!
@@ -21,9 +22,10 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
-    lazy var weatherManager = APIWeatherManager(apiKey: "5d44e65a12a100f6a8970eaa7821c624")
+    lazy var weatherManager = APIWeatherManager(apiKey: "a42cd8b5e4ac1cacdda13c6381721de7")
     var coordinates = Coordinates(latitude: 0, longitude: 0)
     
+    //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -34,10 +36,12 @@ class ViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
     }
     
+    //MARK: - Refresh button
     @IBAction func refreshButtonAction(_ sender: Any) {
         getCurrentWeatherData()
     }
     
+    //MARK: - Getting data
     func getCurrentWeatherData() {
         weatherManager.fetchCurrentWeatherWith(coordinates: coordinates) { (result) in
             switch result {
@@ -45,7 +49,7 @@ class ViewController: UIViewController {
                 self.updateUIWith(currentWeather: currentWeather)
             case .Failure(let error as NSError):
                 
-                let alertController = UIAlertController(title: "Unable to get data", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Unable to get data".localize(), message: "\(error.localizedDescription)", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(action)
                 
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
         }
     }
 
+    //MARK: - Updating UI
     func updateUIWith(currentWeather: CurrentWeather) {
         self.imageView.image = currentWeather.icon
         self.pressureLabel.text = currentWeather.pressureString
@@ -66,6 +71,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: CLLocationManagerDelegate {
+    //MARK: - Getting current location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last! as CLLocation
         self.coordinates.latitude = userLocation.coordinate.latitude

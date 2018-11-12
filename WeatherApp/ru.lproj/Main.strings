@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "30%"; ObjectID = "F0L-iM-Cfe"; */
+"F0L-iM-Cfe.text" = "30%";
+
+/* Class = "UILabel"; text = "30˚C"; ObjectID = "HEK-du-OqG"; */
+"HEK-du-OqG.text" = "30˚C";
+
+/* Class = "UILabel"; text = "Feels like 28˚C"; ObjectID = "LrN-J8-sy4"; */
+"LrN-J8-sy4.text" = "Feels like 28˚C";
+
+/* Class = "UILabel"; text = "Current location"; ObjectID = "p5r-r7-lxV"; */
+"p5r-r7-lxV.text" = "Текущее местоположение";
+
+/* Class = "UILabel"; text = "740 mm"; ObjectID = "r6Z-sF-6Da"; */
+"r6Z-sF-6Da.text" = "740 mm";

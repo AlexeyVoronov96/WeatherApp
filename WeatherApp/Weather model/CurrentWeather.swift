@@ -37,7 +37,8 @@ extension CurrentWeather: JSONDecodable {
 
 extension CurrentWeather {
     var pressureString: String {
-        return "\(Int(pressure * 0.750062)) mm"
+        let miliMetres = " mm".localize()
+        return "\(Int(pressure * 0.750062))" + miliMetres
     }
     var humidityString: String {
         return "\(Int(humidity * 100))%"
@@ -46,7 +47,8 @@ extension CurrentWeather {
         return "\(Int(5 / 9 * (temperature - 32)))˚C"
     }
     var apparentTemperatureString: String {
-        return "Feels like: \(Int(5 / 9 * (apparentTemperature - 32)))˚C"
+        let feels = "Feels Like:".localize()
+        return feels + " \(Int(5 / 9 * (apparentTemperature - 32)))˚C"
     }
 }
 
